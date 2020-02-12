@@ -25,3 +25,5 @@ require (
 	sigs.k8s.io/controller-runtime v0.3.0
 	sigs.k8s.io/yaml v1.1.0
 )
+
+replace sigs.k8s.io/cluster-api => github.com/mgugino-upstream-stage/cluster-api v0.0.0-20200212203356-21d9b5bfbb24

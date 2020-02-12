@@ -342,6 +342,8 @@ func (r *AWSMachineReconciler) reconcileNormal(ctx context.Context, machineScope
 	existingInstanceState := machineScope.GetInstanceState()
 	machineScope.SetInstanceState(instance.State)
 
+	machineScope.SetCapabilities()
+
 	// TODO(vincepri): Remove this annotation when clusterctl is no longer relevant.
 	machineScope.SetAnnotation("cluster-api-provider-aws", "true")
 	// Proceed to reconcile the AWSMachine state.

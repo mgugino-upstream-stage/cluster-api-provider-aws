@@ -231,6 +231,12 @@ spec:
                 - type
                 type: object
               type: array
+            capabilities:
+              description: Capabilities is a set of capabilities this machine can
+                peform, such as power on and off.
+              items:
+                type: string
+              type: array
             errorMessage:
               description: "ErrorMessage will be set in the event that there is a
                 terminal problem reconciling the Machine and will contain a more verbose

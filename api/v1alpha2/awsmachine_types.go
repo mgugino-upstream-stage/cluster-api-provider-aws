@@ -165,6 +165,10 @@ type AWSMachineStatus struct {
 	// controller's output.
 	// +optional
 	ErrorMessage *string `json:"errorMessage,omitempty"`
+
+	// Capabilities is a set of capabilities this machine can peform, such as
+	// power on and off.
+	Capabilities *[]string `json:"capabilities,omitempty"`
 }
 
 // +kubebuilder:object:root=true

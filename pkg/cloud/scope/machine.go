@@ -283,3 +283,8 @@ func (m *MachineScope) InstanceIsInKnownState() bool {
 func (m *MachineScope) AWSMachineIsDeleted() bool {
 	return !m.AWSMachine.ObjectMeta.DeletionTimestamp.IsZero()
 }
+
+// SetReady sets the AWSMachine Ready Status
+func (m *MachineScope) SetCapabilities() {
+	m.AWSMachine.Status.Capabilities = &[]string{clusterv1.InfraCapbilityPowerOn, clusterv1.InfraCapbilityPowerOff}
+}
